@@ -1,0 +1,14 @@
+C:\Users\anma07002\Downloads\TestThing\Binary search\bin\Debug\net9.0\Binary search.exe
+C:\Users\anma07002\Downloads\TestThing\Binary search\bin\Debug\net9.0\Binary search.deps.json
+C:\Users\anma07002\Downloads\TestThing\Binary search\bin\Debug\net9.0\Binary search.runtimeconfig.json
+C:\Users\anma07002\Downloads\TestThing\Binary search\bin\Debug\net9.0\Binary search.dll
+C:\Users\anma07002\Downloads\TestThing\Binary search\bin\Debug\net9.0\Binary search.pdb
+C:\Users\anma07002\Downloads\TestThing\Binary search\obj\Debug\net9.0\Binary search.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anma07002\Downloads\TestThing\Binary search\obj\Debug\net9.0\Binary search.AssemblyInfoInputs.cache
+C:\Users\anma07002\Downloads\TestThing\Binary search\obj\Debug\net9.0\Binary search.AssemblyInfo.cs
+C:\Users\anma07002\Downloads\TestThing\Binary search\obj\Debug\net9.0\Binary search.csproj.CoreCompileInputs.cache
+C:\Users\anma07002\Downloads\TestThing\Binary search\obj\Debug\net9.0\Binary search.dll
+C:\Users\anma07002\Downloads\TestThing\Binary search\obj\Debug\net9.0\refint\Binary search.dll
+C:\Users\anma07002\Downloads\TestThing\Binary search\obj\Debug\net9.0\Binary search.pdb
+C:\Users\anma07002\Downloads\TestThing\Binary search\obj\Debug\net9.0\Binary search.genruntimeconfig.cache
+C:\Users\anma07002\Downloads\TestThing\Binary search\obj\Debug\net9.0\ref\Binary search.dll
