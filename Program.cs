@@ -8,8 +8,8 @@ int[] sizes = [1, 10, 100, 1000, 10000, 100000];
 bool[] exceptions = [
     // false to include in calculation, true to exclude
     false, // Bubble Sort
-    false, // Insertion Sort
     false, // Selection Sort
+    false, // Insertion Sort 
     false, // Merge Sort
     false  // Quick Sort
 ];
@@ -29,9 +29,7 @@ for (int k = 0; k < sampleSize; k++)
         // The sorting algorithm used changes as j increases
         for (int j = 0; j <= 4; j++)
         {   
-            if (exceptions[j]){} // Does nothing if sorting algorithm is excluded
-            
-            else
+            if (!exceptions[j])// Does nothing if sorting algorithm is excluded
             { 
                 // Makes a neq temporary array
                 int[] temp = new int[ua.Length];
@@ -57,9 +55,7 @@ Console.WriteLine("------------------------------------------");
 // Prints result
 for (int j = 0; j < totalTimes.GetLength(0); j++)
 {   
-    if (exceptions[j]) {} // Does nothing if sorting algorithm is excluded
-
-    else
+    if (!exceptions[j]) // Does nothing if sorting algorithm is excluded
     {
         switch (j)
         {

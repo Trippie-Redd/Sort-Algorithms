@@ -1,5 +1,9 @@
 static class Sort
 {
+    // Make QuickSort and MergeSort return int[]
+    // OR
+    // Make return type for iterative functions void
+    
     static public void SortingFunc(int sortMethod, int[] a)
     {
         switch(sortMethod)
