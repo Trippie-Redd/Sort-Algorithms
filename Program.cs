@@ -3,8 +3,8 @@
 Random rng = new Random();
 Stopwatch stopwatch = new Stopwatch();
 
-int sampleSize = 1; // Higher numbers increase accuracy of results
-int[] sizes = [1000000];
+int sampleSize = 10; // Higher numbers increase accuracy of results
+int[] sizes = [1, 10, 100, 1000, 10000, 100000];
 bool[] exceptions = [
     // false to include in calculation, true to exclude
     false, // Bubble Sort

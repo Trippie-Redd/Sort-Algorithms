@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\anma07002\\Downloads\\TestThing\\Binary search\\Binary search.csproj": {}
+    "C:\\Users\\anma07002\\Downloads\\TestThing\\Binary search\\Sort-Algorithms\\Binary search.csproj": {}
   },
   "projects": {
-    "C:\\Users\\anma07002\\Downloads\\TestThing\\Binary search\\Binary search.csproj": {
+    "C:\\Users\\anma07002\\Downloads\\TestThing\\Binary search\\Sort-Algorithms\\Binary search.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anma07002\\Downloads\\TestThing\\Binary search\\Binary search.csproj",
+        "projectUniqueName": "C:\\Users\\anma07002\\Downloads\\TestThing\\Binary search\\Sort-Algorithms\\Binary search.csproj",
         "projectName": "Binary search",
-        "projectPath": "C:\\Users\\anma07002\\Downloads\\TestThing\\Binary search\\Binary search.csproj",
+        "projectPath": "C:\\Users\\anma07002\\Downloads\\TestThing\\Binary search\\Sort-Algorithms\\Binary search.csproj",
         "packagesPath": "C:\\Users\\anma07002\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anma07002\\Downloads\\TestThing\\Binary search\\obj\\",
+        "outputPath": "C:\\Users\\anma07002\\Downloads\\TestThing\\Binary search\\Sort-Algorithms\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
