@@ -4,20 +4,25 @@ Random rng = new Random();
 Stopwatch stopwatch = new Stopwatch();
 
 int sampleSize = 10; // Higher numbers increase accuracy of results
-int[] sizes = [1, 10, 100, 1000, 10000, 100000];
-bool[] exceptions = [
-    // false to include in calculation, true to exclude
-    false, // Bubble Sort
-    false, // Selection Sort
-    false, // Insertion Sort 
-    false, // Merge Sort
-    false  // Quick Sort
+int[] sizes = [10, 100, 1000, 10000, 100000];
+bool[] inclusions = [
+    // true to include in calculation, false to exclude
+    true, // Bubble Sort, 1
+    true, // Selection Sort, 2
+    true, // Insertion Sort, 3
+    true, // Merge Sort, 4
+    true  // Quick Sort, 5
 ];
 
-double[,] totalTimes = new double[5, sizes.Length];
+double[,] totalTimes = new double[inclusions.Length, sizes.Length];
+string buffer = "------------------------------------------";
 
-// Main loop
+// Program
+
+Console.WriteLine(buffer);
+
 // Used to run sampleSize samples
+// Gets total times for all algorithms and sizes
 for (int k = 0; k < sampleSize; k++)
 {
     // Runs for all sizes in sizes
@@ -29,7 +34,7 @@ for (int k = 0; k < sampleSize; k++)
         // The sorting algorithm used changes as j increases
         for (int j = 0; j <= 4; j++)
         {   
-            if (!exceptions[j])// Does nothing if sorting algorithm is excluded
+            if (inclusions[j])// Does nothing if sorting algorithm is excluded
             { 
                 // Makes a neq temporary array
                 int[] temp = new int[ua.Length];
@@ -42,6 +47,21 @@ for (int k = 0; k < sampleSize; k++)
                 stopwatch.Stop();
                 totalTimes[j, i] += stopwatch.ElapsedTicks/(double)Stopwatch.Frequency*1000; // Goes to fast if i use ElapsedMilliseconds straight up, this give correct answers
                 stopwatch.Reset();
+
+                /*
+                // Checks if lists are properly sorted
+                int tempCount = temp[0];
+                foreach (int n in temp)
+                {
+                    if (n < tempCount)
+                    {
+                        Console.WriteLine($"List is not properly sorted. \nSorting Algorithm {j+1} used.");
+                        return;
+                    }
+                    
+                    tempCount = n;
+                }
+                */
             }
         }
     }
@@ -49,13 +69,12 @@ for (int k = 0; k < sampleSize; k++)
     Console.WriteLine("Sample " + (k+1) + " of " + sampleSize + " done!");
 }
 
-// Buffer
-Console.WriteLine("------------------------------------------");
+Console.WriteLine(buffer);
 
 // Prints result
 for (int j = 0; j < totalTimes.GetLength(0); j++)
 {   
-    if (!exceptions[j]) // Does nothing if sorting algorithm is excluded
+    if (inclusions[j]) // Does nothing if sorting algorithm is excluded
     {
         switch (j)
         {
@@ -84,7 +103,7 @@ for (int j = 0; j < totalTimes.GetLength(0); j++)
     }
 }
 
-Console.WriteLine("------------------------------------------");
+Console.WriteLine(buffer);
 
 // Returns a random array with specified length
 int[] RandomArray(int length)

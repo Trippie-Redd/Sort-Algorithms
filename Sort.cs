@@ -1,8 +1,16 @@
 static class Sort
 {
-    // Make QuickSort and MergeSort return int[]
-    // OR
-    // Make return type for iterative functions void
+    /*
+    How to add a new sorting algorithm to program:
+    
+    Sort.cs:
+        Add static function
+        Add a case with function to SortingFunc
+    
+    Program.cs:
+        Add a bool to inclusions
+        Add new case to switch(j) near end of Program
+    */
     
     static public void SortingFunc(int sortMethod, int[] a)
     {
@@ -131,6 +139,7 @@ static class Sort
         int rSize = fullArray.Length - lSize;
         int f = 0, l = 0, r = 0;
 
+        // Merge elements from both arrays into fullArray in sorted order
         while (l < lSize && r < rSize)
         {
             if (leftArray[l] < rightArray[r])
@@ -147,6 +156,7 @@ static class Sort
             }
         }
 
+        // Add any remaining elements from leftArray to fullArray
         while (l < lSize)
         {
             fullArray[f] = leftArray[l];
@@ -154,6 +164,7 @@ static class Sort
             l++;
         }
 
+        // Add any remaining elements from rightArray to fullArray
         while (r < rSize)
         {
             fullArray[f] = rightArray[r];
