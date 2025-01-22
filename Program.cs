@@ -13,6 +13,13 @@ bool[] inclusions = [
     true, // Merge Sort, 4
     true  // Quick Sort, 5
 ];
+string[] algorithmNames = [
+    "Bubble Sort",
+    "Selection Sort",
+    "Insertion Sort",
+    "Merge Sort",
+    "Quick Sort"
+];
 
 double[,] totalTimes = new double[inclusions.Length, sizes.Length];
 string buffer = "------------------------------------------";
@@ -66,7 +73,7 @@ for (int k = 0; k < sampleSize; k++)
         }
     }
 
-    Console.WriteLine("Sample " + (k+1) + " of " + sampleSize + " done!");
+    Console.WriteLine("Sample " + (k+1) + " of " + sampleSize + " done.");
 }
 
 Console.WriteLine(buffer);
@@ -76,24 +83,11 @@ for (int j = 0; j < totalTimes.GetLength(0); j++)
 {   
     if (inclusions[j]) // Does nothing if sorting algorithm is excluded
     {
-        switch (j)
-        {
-            case 0:
-                Console.Write("Bubble Sort:     ");
-                break;
-            case 1:
-                Console.Write("Selection Sort:  ");
-                break;
-            case 2:
-                Console.Write("Insertion Sort:  ");
-                break;
-            case 3:
-                Console.Write("Merge Sort:      ");
-                break;
-            case 4:
-                Console.Write("Quick Sort:      ");
-                break;
-        }
+        string algorithmName = algorithmNames[j];
+        algorithmName += ":";
+        while (algorithmName.Length <= 17)
+            algorithmName += " ";
+        Console.Write(algorithmName);
 
         for (int i = 0; i < totalTimes.GetLength(1); i++)
         {

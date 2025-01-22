@@ -8,8 +8,8 @@ static class Sort
         Add a case with function to SortingFunc
     
     Program.cs:
-        Add a bool to inclusions
-        Add new case to switch(j) near end of Program
+        Add a bool to end of inclusions
+        Add stringname to end of algorithmNames
     */
     
     static public void SortingFunc(int sortMethod, int[] a)
