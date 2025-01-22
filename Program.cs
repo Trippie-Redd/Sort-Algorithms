@@ -4,7 +4,7 @@ Random rng = new Random();
 Stopwatch stopwatch = new Stopwatch();
 
 int sampleSize = 10; // Higher numbers increase accuracy of results
-int[] sizes = [10, 100, 1000, 10000, 100000];
+int[] sizes = [10, 100, 1000, 10000];
 bool[] inclusions = [
     // true to include in calculation, false to exclude
     true, // Bubble Sort, 1
@@ -49,7 +49,7 @@ for (int k = 0; k < sampleSize; k++)
 
                 stopwatch.Start();
 
-                Sort.SortingFunc(j, temp);
+                Sort.SortingFunc(algorithmNames[j], temp);
                 
                 stopwatch.Stop();
                 totalTimes[j, i] += stopwatch.ElapsedTicks/(double)Stopwatch.Frequency*1000; // Goes to fast if i use ElapsedMilliseconds straight up, this give correct answers

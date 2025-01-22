@@ -5,34 +5,35 @@ static class Sort
     
     Sort.cs:
         Add static function
-        Add a case with function to SortingFunc
+        Add a case stringname(must be same as in algorithmNames) with function to SortingFunc
     
     Program.cs:
-        Add a bool to end of inclusions
-        Add stringname to end of algorithmNames
+        Add a bool to inclusions
+        Add stringname to algorithmNames
+        Stringname and bool must have the same index in both arrays
     */
     
-    static public void SortingFunc(int sortMethod, int[] a)
+    static public void SortingFunc(string sortMethod, int[] a)
     {
         switch(sortMethod)
         {
-            case 0: // Bubble Sort
+            case "Bubble Sort":
                 BubbleSort(a);
                 break;
-            case 1: // Insertion Sort
+            case "Selection Sort":
                 SelectionSort(a);
                 break;
-            case 2: // Selection Sort
+            case "Insertion Sort":
                 InsertionSort(a);
                 break;
-            case 3: // Merge Sort
+            case "Merge Sort":
                 MergeSort(a);
                 break;
-            case 4: // Quick Sort
+            case "Quick Sort":
                 QuickSort(a, 0, a.Length-1);
                 break;
             default: // Should not run
-                Console.WriteLine("Sorting func not found");
+                Console.WriteLine("Sorting func " + sortMethod + " not found");
                 break;
         }
     }
